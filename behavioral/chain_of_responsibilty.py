@@ -35,14 +35,14 @@ class FrogGameHandler(GameHandler):
 
 
 class WizardGameHandler(GameHandler):
-    def check_age(self, age: int) -> Optional[bool]:
+    def check_age(self, age: int) -> WizardWorld | None:
         if 18 <= age < 30:
             return WizardWorld("Wizard")
         return None
 
 
 class ArmyGameHandler(GameHandler):
-    def check_age(self, age: int) -> Optional[bool]:
+    def check_age(self, age: int) -> ArmyWorld | None:
         if 30 <= age < 50:
             return ArmyWorld("Army")
         return None
