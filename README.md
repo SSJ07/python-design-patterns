@@ -22,3 +22,4 @@
      - [Proxy](structural/proxy.py)
    - [Behavioral](behavioral) : These are related to how objects should communicate to each other in larger structure
      - [Chain of responsibility](behavioral/chain_of_responsibilty.py)
+     - [Command](behavioral/command.py)
