@@ -54,8 +54,8 @@ class DefaultFormatter(Publisher):
     def data(self, value: int) -> None:
         try:
             self._data = int(value)
-        except TypeError:
-            logger.error("Invalid type")
+        except ValueError:
+            logger.error("Invalid data value type. Must be int value")
         else:
             self.notify()
 
@@ -86,6 +86,11 @@ def main():
     bn = BinaryFormatterObs()
     df.add(bn)
     df.data = 5
+
+    df.remove(hf)
+    df.data = 40
+
+    df.data = "Hello"
 
 
 if __name__ == '__main__':
